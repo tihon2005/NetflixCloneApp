@@ -14,7 +14,11 @@ class MainTabBarViewController: UITabBarController {
         view.backgroundColor = .systemYellow
         
         let vc1 = UINavigationController(rootViewController: HomeViewController())
-        let vc2 = UINavigationController(rootViewController: UpcomingViewController())
+        vc1.tabBarItem.image = UIImage(systemName: "house")
+        vc1.tabBarItem.title = "Home"
+        tabBar.tintColor = .label
+        setViewControllers([vc1], animated: true)
+        /*let vc2 = UINavigationController(rootViewController: UpcomingViewController())
         let vc3 = UINavigationController(rootViewController: SeacrhViewController())
         let vc4 = UINavigationController(rootViewController: DownloadsViewController())
         
@@ -30,7 +34,8 @@ class MainTabBarViewController: UITabBarController {
         
         tabBar.tintColor = .label
         
-        setViewControllers([vc1, vc2, vc3, vc4], animated: true)
+        setViewControllers([vc1, vc2, vc3, vc4], animated: true)*/
+        
     }
 
 
